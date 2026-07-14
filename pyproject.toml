@@ -20,8 +20,8 @@ docs = [
     "pdoc==16.0.0",
 ]
 lint = [
-    "mypy==2.3.0",
     "pre-commit==4.6.0",
+    "pyright==1.1.411",
     "ruff==0.15.21",
 ]
 test = [
@@ -53,12 +53,8 @@ ignore = [
     "E501",  # line too long (handled by ruff)
 ]
 
-[tool.mypy]
-strict = true
-ignore_missing_imports = true
-exclude = [
-    '^tests/.*'
-]
+[tool.pyright]
+typeCheckingMode = "strict"
 
 [tool.coverage.run]
 omit = [

@@ -22,8 +22,11 @@ repos:
         args: [--fix]
       - id: ruff-format
 
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.19.1
+  - repo: local
     hooks:
-      - id: mypy
-        entry: bash -c 'uv run mypy .'
+      - id: pyright
+        name: pyright
+        entry: uv run pyright .
+        language: system
+        types: [python]
+        pass_filenames: false
