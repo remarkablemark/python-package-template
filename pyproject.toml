@@ -22,7 +22,7 @@ docs = [
 lint = [
     "pre-commit==4.6.1",
     "pyright==1.1.411",
-    "ruff==0.16.1",
+    "ruff==0.16.2",
 ]
 test = [
     "coverage==7.15.4",
